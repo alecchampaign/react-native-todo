@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 const {width} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/AntDesign';
@@ -23,7 +24,6 @@ const Todo = props => {
           <View style={styles.todo}>
             <Text style={styles.todoText}>{todo}</Text>
             <TouchableOpacity onPress={() => handleRemovePress(index)}>
-              {/* <Text style={styles.todoX}>X</Text> */}
               <Icon name="closecircleo" size={30} color="red" />
             </TouchableOpacity>
           </View>

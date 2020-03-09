@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {TextInput, View, Dimensions, StyleSheet} from 'react-native';
 import Button from './button';
 
@@ -19,6 +19,7 @@ const Modal = props => {
   return props.isActive ? (
     <View style={styles.container}>
       <TextInput
+        autoFocus
         style={styles.input}
         value={value}
         onChangeText={handleChange}
