@@ -7,6 +7,7 @@ import {
   Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+
 const {width} = Dimensions.get('window');
 
 const TodoItem = props => {

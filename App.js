@@ -25,9 +25,11 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#f3f6fb" />
       <SafeAreaView style={styles.container}>
-        <Text style={styles.header}>
-          {moment.default().format('dddd, MMMM Do')}
-        </Text>
+        <View style={styles.headerContainer}>
+          <Text style={styles.header}>
+            {moment.default().format('dddd, MMMM Do')}
+          </Text>
+        </View>
         <Todo todos={todos} setTodos={setTodos} />
         <View style={styles.inputContainer}>
           <Button buttonContent="Add todo" handlePress={handleModalPress} />
@@ -44,10 +46,14 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   header: {
     fontSize: 35,
     fontWeight: 'bold',
-    marginTop: 20,
     color: '#3dabf0',
   },
   container: {
@@ -56,11 +62,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   inputContainer: {
-    marginLeft: 50,
-    marginRight: 50,
+    marginTop: 10,
     flex: 1,
     backgroundColor: '#f3f6fb',
     marginBottom: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   input: {
     color: 'white',
