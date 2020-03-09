@@ -10,6 +10,7 @@ import {
 import Button from './src/button';
 import Modal from './src/modal';
 import Todo from './src/todo';
+import * as moment from 'moment';
 
 const App = () => {
   const [inputText, setInputText] = useState('');
@@ -30,7 +31,9 @@ const App = () => {
           setTodos={setTodos}
           setIsActive={setIsActive}
         />
-        <Text style={styles.header}>Todo List</Text>
+        <Text style={styles.header}>
+          {moment.default().format('dddd, MMMM Do')}
+        </Text>
         <Todo todos={todos} setTodos={setTodos} />
         <View style={styles.inputContainer}>
           <Button buttonContent="Add todo" handlePress={handleModalPress} />
@@ -42,7 +45,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: 40,
+    fontSize: 35,
     fontWeight: 'bold',
     marginTop: 20,
     color: '#3dabf0',
