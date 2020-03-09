@@ -25,12 +25,6 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#f3f6fb" />
       <SafeAreaView style={styles.container}>
-        <Modal
-          isActive={isActive}
-          todos={todos}
-          setTodos={setTodos}
-          setIsActive={setIsActive}
-        />
         <Text style={styles.header}>
           {moment.default().format('dddd, MMMM Do')}
         </Text>
@@ -38,6 +32,12 @@ const App = () => {
         <View style={styles.inputContainer}>
           <Button buttonContent="Add todo" handlePress={handleModalPress} />
         </View>
+        <Modal
+          isActive={isActive}
+          todos={todos}
+          setTodos={setTodos}
+          setIsActive={setIsActive}
+        />
       </SafeAreaView>
     </>
   );
