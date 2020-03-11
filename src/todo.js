@@ -10,11 +10,6 @@ const Todo = props => {
   };
 
   return (
-    // <View style={styles.todoContainer}>
-    //   {props.todos.map((todo, index) => {
-    //     return <TodoItem todo={todo} />;
-    //   })}
-    // </View>
     <View style={styles.todoContainer}>
       <FlatList
         style={styles.todoContainer}
