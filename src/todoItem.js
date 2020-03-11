@@ -10,7 +10,7 @@ const TodoItem = props => {
   return (
     <TouchableOpacity
       onPress={() => setIsActive(!isActive)}
-      onLongPress={() => props.handleRemovePress(props.index)}
+      onLongPress={() => props.handleRemovePress(props.key)}
       style={
         isActive ? styles.todo : [styles.todo, {backgroundColor: '#f7f7f7'}]
       }>

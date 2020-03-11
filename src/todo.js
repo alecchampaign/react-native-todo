@@ -24,7 +24,7 @@ const Todo = props => {
           <TodoItem
             todo={data.item}
             handleRemovePress={handleRemovePress}
-            index={data.index}
+            key={data.index}
           />
         )}
       />
