@@ -1,23 +1,13 @@
 import React, {useState} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  TouchableNativeFeedback,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Text, StatusBar} from 'react-native';
 import Button from './src/button';
 import Modal from './src/modal';
 import Todo from './src/todo';
 import * as moment from 'moment';
 
 const App = () => {
-  const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [isActive, setIsActive] = useState(false);
-
-  const handleInputChange = value => setInputText(value);
 
   const handleModalPress = () => setIsActive(!isActive);
 

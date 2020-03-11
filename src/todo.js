@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Dimensions, FlatList} from 'react-native';
+import React from 'react';
+import {View, StyleSheet, FlatList} from 'react-native';
 import TodoItem from './todoItem';
 
 const Todo = props => {

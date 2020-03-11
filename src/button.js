@@ -1,6 +1,5 @@
 import React from 'react';
 import {TouchableOpacity, Text, Dimensions, StyleSheet} from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
 
 const {width} = Dimensions.get('window');
 

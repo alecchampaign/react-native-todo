@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {TextInput, View, Dimensions, StyleSheet} from 'react-native';
 import Button from './button';
 
