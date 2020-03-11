@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Dimensions,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import {SwipeListView} from 'react-native-swipe-list-view';
 import TodoItem from './todoItem';
@@ -26,7 +27,7 @@ const Todo = props => {
     //   })}
     // </View>
     <View style={styles.todoContainer}>
-      <SwipeListView
+      <FlatList
         style={styles.todoContainer}
         contentContainerStyle={styles.contentContainer}
         data={props.todos}

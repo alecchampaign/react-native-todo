@@ -31,6 +31,7 @@ const TodoItem = props => {
         name={isActive ? 'checkcircleo' : 'checkcircle'}
         size={30}
         color="#7d8287"
+        style={{flex: 1, textAlign: 'center', fontSize: 35}}
       />
     </TouchableOpacity>
   );
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
     fontSize: 30,
     color: '#7d8287',
+    flex: 7,
   },
 });
 
