@@ -1,17 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Dimensions,
-  ScrollView,
-  FlatList,
-} from 'react-native';
-import {SwipeListView} from 'react-native-swipe-list-view';
+import {View, StyleSheet, Dimensions, FlatList} from 'react-native';
 import TodoItem from './todoItem';
-
-const {height, width} = Dimensions.get('window');
 
 const Todo = props => {
   const handleRemovePress = index => {
@@ -31,8 +20,13 @@ const Todo = props => {
         style={styles.todoContainer}
         contentContainerStyle={styles.contentContainer}
         data={props.todos}
-        renderItem={(data, rowMap) => <TodoItem todo={data.item} />}
-        renderHiddenItem={(data, rowMap) => <View></View>}
+        renderItem={(data, rowMap) => (
+          <TodoItem
+            todo={data.item}
+            handleRemovePress={handleRemovePress}
+            index={data.index}
+          />
+        )}
       />
     </View>
   );
